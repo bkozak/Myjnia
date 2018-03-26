@@ -7,7 +7,7 @@
 
 <div class="row text-light">
     <div class="col-md-8">
-        <div class="card border-dark bg-secondary text-white">
+        <div class="card">
             <div class="card-header">
                 <h2 class="text-light">@ViewBag.Title.</h2>
             </div>
@@ -19,10 +19,10 @@
                         
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                         <div class="form-group">
-                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                            @Html.LabelFor(m => m.Email, new {@style="color: black", @class = "col-md-2 control-label"})
                             <div class="col-md-10">
                                 @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger"})
                             </div>
                         </div>
                         <div class="form-group">
@@ -36,7 +36,7 @@
                             <div class="col-md-offset-2 col-md-10">
                                 <div class="checkbox">
                                     @Html.CheckBoxFor(m => m.RememberMe)
-                                    @Html.LabelFor(m => m.RememberMe)
+                                    @Html.Label("Zapamiętaj mnie")
                                 </div>
                             </div>
                         </div>

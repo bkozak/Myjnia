@@ -250,6 +250,7 @@
     <Content Include="Zdjecia\20171105_180618.jpg" />
     <Content Include="Zdjecia\20171105_210148.jpg" />
     <Content Include="Zdjecia\20171106_075432.jpg" />
+    <Content Include="Zdjecia\tlostrona.jpg" />
     <Content Include="Zdjecia\zdj1.jpg" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />

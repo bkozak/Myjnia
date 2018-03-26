@@ -1,12 +1,19 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url("/Zdjecia/tlostrona.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.txtclr {
+    color: black;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

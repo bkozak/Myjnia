@@ -8,36 +8,38 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body class="bg-dark">    
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
             <a class="navbar-brand" href="#">@Html.ActionLink("Myjnia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                       @Html.ActionLink("Strona główna", "Index", "Home", new { @class = "nav-link" })
+                       @Html.ActionLink("Strona główna", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("O nas", "About", "Home", new { @class = "nav-link" })
+                        @Html.ActionLink("O nas", "About", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Kontakt", "Contact", "Home", new { @class = "nav-link" })
-                    </li>      
+                        @Html.ActionLink("Kontakt", "Contact", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })
+                    </li>
                     </ul>
-                <ul class="navbar-nav">             
+                <ul class="navbar-nav">
                     <li class="float-right">
                         @Html.Partial("_LoginPartial")
-                        @*<button type="button" class="btn btn-secondary float-right" data-toggle="modal" data-target="#exampleModalCenter">
-                           
-                        </button>*@                        
-                    </li>                      
-                </ul>                 
-            </div>  
+                    </li>
+                </ul>
+            </div>
         </nav>
+    @*<button type="button" class="btn btn-secondary float-right" data-toggle="modal" data-target="#exampleModalCenter">
+
+        </button>*@
+
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    @*<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -47,7 +49,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -55,8 +57,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content mt-3 bg-dark">
+    </div>*@
+    <div class="container body-content mt-3">
         @RenderBody()
         <hr />
         <footer>
